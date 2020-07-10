@@ -4,8 +4,8 @@ export default function loop() {
     whileLoop() //0 es5
     doWhileLoop() //1 es5
     forLoop() //2 es5
-    forInLoop() // 3
-    forOfArrayLoop() //4
+    forInArrayLoop() // 3
+ //   forOfArrayLoop() //4
     forInObjectLoop() //5
     forOfMapLoop() //6
     forOfSetLoop() // 7
@@ -45,30 +45,51 @@ export function forLoop() {
     console.log(`1부터 100까지 합: ${sum}`)
 }
 
-function forInLoop() {
-
-}
-
-function forOfArrayLoop() {
-
+function forInArrayLoop() {
+    console.log(`----3.forInArrayLoop----`)
+    let arr:object = ["a","b","c","d"]
+    for(let i in arr){
+        console.log(i,arr[i])
+    }
 }
 
 function forInObjectLoop() {
-
+    console.log(`----4.forInObjectLoop----`)
+    let fruits= {"a":"apple","b":"banana","c":"cherry"}
+    for(let i in fruits){
+        console.log(i,fruits[i])
+    }
 }
 
 function forOfMapLoop() {
-
+    console.log(`----5.forOfMapLoop----`)
+    let map = new Map([["a",1],["b",2]])
+    map.set("a",3)
+    // for(let i of map){
+    //     console.log(i)
+    // }
 }
 
 function forOfSetLoop() {
-
+    console.log(`----6.forOfMapLoop----`)
 }
 
 function forOfStringLoop() {
+    console.log(`----8.forOfStringLoop----`)
+    for(let i of "Hellop"){
+        console.log(i
 
+
+        )
+    }
 }
 
 function symbolIterator() {
-
+    console.log(`----9.symbolIterator----`)
+    let arr = [1,2]
+    let obj = arr[Symbol.iterator]()
+    console.log(`1.${typeof obj}`)
+    console.log(`2.${obj.next()}`)
+    console.log(`3.${obj.next()}`)
+    console.log(`4.${obj.next()}`)
 }
