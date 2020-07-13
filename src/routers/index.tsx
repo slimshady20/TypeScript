@@ -5,15 +5,8 @@ import {HomePage} from '../pages'
 
 
 const routerConfig=[
-    {
-    path: '/',
-    exact : true,
-    component: ()=> <Redirect to='/home'/>
-    },
-    {
-        path: '/home',
-        exact: true,
-        component: HomePage
-    },
-    ]
+    {path: '/', exact : true, component: ()=> <Redirect to='/home'/>},
+    {path: '/home', exact: true, component: HomePage},
+
+]
 export default routerConfig
