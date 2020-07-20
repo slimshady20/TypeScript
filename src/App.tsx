@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Home, MyChatBot} from "./components";
-import {Counter, HelloName, Clock, Cat} from "./oop";
+import {Counter, HelloName, Clock, Cat} from "./components";
 import {Provider} from 'react-redux';
 import {ConnectedRouter} from 'connected-react-router';
-import {HomePage} from "./pages";
+import {HomePage} from "./progress";
 import './App.css';
 
 class App extends Component<any, any>{
@@ -36,7 +36,7 @@ class App extends Component<any, any>{
                 <Route exact path='/counter'><Counter startNumber={0}/></Route>
                 <Route exact path='/hello'><HelloName name={"홍길동"}/></Route>
             </Router>
-            <HomePage/>
+
         </div></div>
     }
 }
